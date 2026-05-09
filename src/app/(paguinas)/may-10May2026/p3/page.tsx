@@ -5,7 +5,7 @@ import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 import { useLang } from "../../../context/LanguageContext";
 
-
+//http://localhost:3000/may-10May2026/p1
 export default function P3() {
     const { t } = useLang()
     const m = t.may.p3
