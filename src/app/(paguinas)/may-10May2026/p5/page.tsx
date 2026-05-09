@@ -3,35 +3,31 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
-// import { useLang } from "../context/LanguageContext";
-// import LanguageSwitcher from "../components/LanguageSwitcher";
+import { useLang } from "../../../context/LanguageContext";
 
-export default function P1() {
-    // const { t } = useLang()
+export default function P5() {
+    const { t } = useLang()
+    const m = t.may.p5
 
     return (
         <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
             <main className="relative flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-[#002E5D] text-white sm:items-start">
-                {/* <LanguageSwitcher /> */}
-                <div>
+
+                <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
+                    <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
+                        {m.h1}
+                    </h1>
                     <Image
-                        src="/sin-llave.png"
-                        alt="Sin llave"
-                        width={150}
-                        height={100}
+                        src="/jesucritoKoking.png"
+                        alt="Ministrar a su manera"
+                        width={100}
+                        height={40}
                         priority
                     />
-                    <h3>Chuy</h3>
-                    <p>
-                        vazquez<br />
-                        carrillo<br />
-                        el mero<br />
-                    mero
-                    </p>
-                    <Link href="/p2">
+                    <Link href="/may-10May2026">
                         <div className="flex items-center gap-2">
                             <FaArrowRight />
-                            <span>next</span>
+                            <span>{m.goBack}</span>
                         </div>
                     </Link>
                 </div>

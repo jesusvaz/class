@@ -15,7 +15,7 @@ export default function LanguageSwitcher() {
     <select
       value={lang}
       onChange={(e) => setLang(e.target.value as Lang)}
-      className="absolute top-4 right-4 bg-white text-[#002E5D] font-semibold rounded px-2 py-1 text-sm border border-white/30 cursor-pointer"
+      className="absolute top-4 right-4 z-50 bg-white text-[#002E5D] font-semibold rounded px-2 py-1 text-sm border border-white/30 cursor-pointer"
     >
       {options.map((o) => (
         <option key={o.value} value={o.value}>
