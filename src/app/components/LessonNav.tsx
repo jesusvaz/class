@@ -4,13 +4,22 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useLang, Lang } from '../context/LanguageContext'
 
-const pages = [
+const mayPages = [
   { href: '/may-10May2026',    label: '⌂' },
   { href: '/may-10May2026/p1', label: 'P1' },
   { href: '/may-10May2026/p2', label: 'P2' },
   { href: '/may-10May2026/p3', label: 'P3' },
   { href: '/may-10May2026/p4', label: 'P4' },
   { href: '/may-10May2026/p5', label: 'P5' },
+]
+
+const junPages = [
+  { href: '/jun-13June2026',    label: '⌂' },
+  { href: '/jun-13June2026/p1', label: 'P1' },
+  { href: '/jun-13June2026/p2', label: 'P2' },
+  { href: '/jun-13June2026/p3', label: 'P3' },
+  { href: '/jun-13June2026/p4', label: 'P4' },
+  { href: '/jun-13June2026/p5', label: 'P5' },
 ]
 
 const langOptions: { value: Lang; label: string }[] = [
@@ -27,6 +36,8 @@ export default function LessonNav({ position = 'bottom' }: LessonNavProps) {
   const pathname = usePathname()
   const { lang, setLang } = useLang()
   const isTop = position === 'top'
+
+  const pages = pathname.startsWith('/jun') ? junPages : mayPages
 
   return (
     <nav

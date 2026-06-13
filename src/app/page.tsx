@@ -26,6 +26,15 @@ export default function Home() {
     { href: '/may-10May2026/p5', label: t.nav.mayP5 },
   ]
 
+  const series3Links = [
+    { href: '/jun-13June2026', label: t.nav.junHome },
+    { href: '/jun-13June2026/p1', label: t.nav.junP1 },
+    { href: '/jun-13June2026/p2', label: t.nav.junP2 },
+    { href: '/jun-13June2026/p3', label: t.nav.junP3 },
+    { href: '/jun-13June2026/p4', label: t.nav.junP4 },
+    { href: '/jun-13June2026/p5', label: t.nav.junP5 },
+  ]
+
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="relative flex flex-1 w-full max-w-3xl flex-col items-center py-12 px-8 bg-[#002E5D] text-white gap-8">
@@ -45,6 +54,7 @@ export default function Home() {
 
         <NavSection title={t.nav.series1} links={series1Links} />
         <NavSection title={t.nav.series2} links={series2Links} />
+        <NavSection title={t.nav.series3} links={series3Links} />
       </main>
     </div>
   )
