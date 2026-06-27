@@ -8,7 +8,7 @@ import { useLang } from "../../../context/LanguageContext";
 
 export default function P1() {
     const { t } = useLang()
-    const m = t.may.p1
+    const m = t.jun18.p1
 
     return (
         <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
@@ -30,35 +30,23 @@ export default function P1() {
                         />
                     </Link>
 
-                    <h1 className="mt-6 text-5xl font-extrabold">
-                        Yo soy la vid verdadera.
-                        Ustedes son los pámpanos
-                    </h1>
-
+                    <h1 className="mt-6 text-5xl font-extrabold">{m.h1}</h1>
 
                     <br />
-                    <i>Cómo podemos producir buenos frutos?</i>
+                    <i>{m.q}</i>
                     <br /><br />
                     <ul className="list-disc pl-6">
-                        <li>Estudio de las escrituras</li>
-                        <li>Ver videos de la conferencia general</li>
-                        <li>
-                            Clases que nos dieron en la capilla
-                        </li>
-                        <li>
-                            Lecciones aprendidas en el templo
-                        </li>
-
+                        <li>{m.li1}</li>
+                        <li>{m.li2}</li>
+                        <li>{m.li3}</li>
+                        <li>{m.li4}</li>
                     </ul>
                     <Link href="/junio-182026/p2">
                         <div className="flex items-center gap-2 mt-6">
                             <FaArrowRight />
-                            <span>Siguiente</span>
+                            <span>{m.next}</span>
                         </div>
                     </Link>
-
-
-
                 </div>
             </main>
         </div>

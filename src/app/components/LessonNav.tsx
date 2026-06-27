@@ -22,6 +22,15 @@ const junPages = [
   { href: '/jun-13June2026/p5', label: 'P5' },
 ]
 
+const jun18Pages = [
+  { href: '/junio-182026',    label: '⌂' },
+  { href: '/junio-182026/p1', label: 'P1' },
+  { href: '/junio-182026/p2', label: 'P2' },
+  { href: '/junio-182026/p3', label: 'P3' },
+  { href: '/junio-182026/p4', label: 'P4' },
+  { href: '/junio-182026/p5', label: 'P5' },
+]
+
 const langOptions: { value: Lang; label: string }[] = [
   { value: 'es', label: 'ES' },
   { value: 'en', label: 'EN' },
@@ -37,7 +46,9 @@ export default function LessonNav({ position = 'bottom' }: LessonNavProps) {
   const { lang, setLang } = useLang()
   const isTop = position === 'top'
 
-  const pages = pathname.startsWith('/jun') ? junPages : mayPages
+  const pages = pathname.startsWith('/jun-13') ? junPages
+    : pathname.startsWith('/junio-18') ? jun18Pages
+    : mayPages
 
   return (
     <nav

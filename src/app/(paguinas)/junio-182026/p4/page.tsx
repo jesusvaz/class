@@ -6,17 +6,17 @@ import { FaArrowRight } from "react-icons/fa";
 import { useLang } from "../../../context/LanguageContext";
 
 
-export default function P2() {
+export default function P4() {
     const { t } = useLang()
-    const m = t.may.p2
+    const m = t.jun18.p4
 
     return (
         <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
             <main className="relative flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-[#002E5D] text-white sm:items-start">
 
                 <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-                    <h1>Existe mucha informacion</h1>
-                    <h3>Pero carece de revelacion, no puede responder oraciones</h3>
+                    <h1>{m.h1}</h1>
+                    <h3>{m.h2}</h3>
                     <Link
                         href="https://www.youtube.com/watch?v=S1sRXMfdh3U"
                         target="_blank"
@@ -32,9 +32,8 @@ export default function P2() {
                         />
                     </Link>
 
-                   
                     <p>
-                        Las escrituras han salido de la obscuidad para ensanchar nuestro entendimiento de loas enseñanzas de los profetas y de Jesucristo.
+                        {m.body1}
                         <br />
                         <Link
                             href="https://www.churchofjesuschrist.org/study/scriptures?lang=spa"
@@ -42,17 +41,17 @@ export default function P2() {
                             rel="noopener noreferrer"
                             style={{ textDecoration: "underline" }}
                         >
-                            Escrituras
+                            {m.linkText}
                         </Link>
                         <br />
-                        En especial para enseñar que hay un Dios y que ha decretado leyes para vivir en la senda de los convenios.
+                        {m.body2}
                         <br />
-                        Buquemos tener unn testimonio por medio del espiritú. Escudriñemos y Meditemos las escrituras.
+                        {m.body3}
                     </p>
-                     <Link href="/junio-182026/p5">
+                    <Link href="/junio-182026/p5">
                         <div className="flex items-center gap-2 mt-6">
                             <FaArrowRight />
-                            <span>Siguiente</span>
+                            <span>{m.next}</span>
                         </div>
                     </Link>
                 </div>

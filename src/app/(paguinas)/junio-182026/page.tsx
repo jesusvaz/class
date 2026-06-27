@@ -7,6 +7,7 @@ import { useLang } from "../../context/LanguageContext";
 
 export default function JuneHome() {
     const { t } = useLang()
+    const m = t.jun18.home
 
     return (
         <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
@@ -19,7 +20,7 @@ export default function JuneHome() {
                     priority
                 />
                 <div>
-                      <Link
+                    <Link
                         href="https://www.youtube.com/watch?v=68QMfszZJYU"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -36,7 +37,7 @@ export default function JuneHome() {
                     <Link href="/junio-182026/p1">
                         <div className="flex items-center gap-2 mt-6">
                             <FaArrowRight />
-                            <span>Siguiente</span>
+                            <span>{m.start}</span>
                         </div>
                     </Link>
                 </div>
