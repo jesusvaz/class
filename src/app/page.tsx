@@ -35,6 +35,15 @@ export default function Home() {
     { href: '/jun-13June2026/p5', label: t.nav.junP5 },
   ]
 
+  const series4Links = [
+    { href: '/junio-182026',    label: t.nav.jun18Home },
+    { href: '/junio-182026/p1', label: t.nav.jun18P1 },
+    { href: '/junio-182026/p2', label: t.nav.jun18P2 },
+    { href: '/junio-182026/p3', label: t.nav.jun18P3 },
+    { href: '/junio-182026/p4', label: t.nav.jun18P4 },
+    { href: '/junio-182026/p5', label: t.nav.jun18P5 },
+  ]
+
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="relative flex flex-1 w-full max-w-3xl flex-col items-center py-12 px-8 bg-[#002E5D] text-white gap-8">
@@ -55,6 +64,7 @@ export default function Home() {
         <NavSection title={t.nav.series1} links={series1Links} />
         <NavSection title={t.nav.series2} links={series2Links} />
         <NavSection title={t.nav.series3} links={series3Links} />
+        <NavSection title={t.nav.series4} links={series4Links} />
       </main>
     </div>
   )
